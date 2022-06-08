@@ -1,0 +1,33 @@
+.section {
+    margin-top: 30px
+}
+
+.title {
+    margin-bottom: 25px
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrapper {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    margin-top: 40%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.card-body {
+    color: #222222;
+}

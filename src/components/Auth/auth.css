@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #222222;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.user-data {
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-data input {
+    height: 48px;
+    width: 125%;
+    margin: 8px 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset {
+    align-self: flex-end;
+    margin-right: -20px;
+    margin-bottom: 26px;
+}
+.misc {
+    color: #DB3022;
+}
+
+.login-btn,
+.login-btn:active,
+.login-btn a {
+    width: 70%;
+    background-color: #DB3022;
+    color: #FFFFFF;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}

@@ -1,0 +1,35 @@
+.centering {
+    display: flex;
+    justify-content: center;
+}
+
+.user-role {
+    height: 48px;
+    width: 200px;
+    margin-bottom: 32px;
+}
+
+.user-role button {
+    height: 100%;
+    width: 50%;
+    border: 1px solid #9B9B9B;
+    color: #9B9B9B;
+}
+
+.seller-link,
+.seller-link:hover,
+.customer-link,
+.customer-link:hover {
+    text-decoration: none;
+    color: #9B9B9B;
+}
+
+.user-role .role-btn.active {
+    background-color: #DB3022;
+    box-shadow: none;
+    outline: none;
+}
+
+.user-role .role-btn.active a {
+    color: #FFFFFF;
+}

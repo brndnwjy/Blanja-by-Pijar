@@ -1,0 +1,132 @@
+.desc {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 20px;
+    border: 1px solid #9B9B9B;
+    border-radius: 5px;
+    padding: 20px 5px;
+}
+
+.desc>span {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 25px;
+}
+
+.desc>p {
+    color: #9B9B9B;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 25px 25px 10px;
+}
+
+.desc>input {
+    height: 48px;
+    width: 350px;
+    border: 1px solid #9B9B9B;
+    border-radius: 3px;
+    color: #9B9B9B;
+    margin: 0 25px 10px;
+}
+
+.h-line {
+    margin: 20px -5px 0;
+}
+
+.condition {
+    display: flex;
+    align-items: baseline;
+    margin-left: 25px;
+}
+
+.new,
+.old {
+    height: initial;
+    margin-right: 15px;
+}
+
+.new-span,
+.old-span {
+    margin-right: 40px;
+}
+
+.photo {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-top: 30px;
+    border: 1px dashed #9B9B9B;
+    border-radius: 5px;
+    padding: 20px 5px;
+}
+
+.photoset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-photo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-span {
+    color: #9B9B9B;
+    margin-left: 42px;
+}
+
+.first-photo,
+.rest-photo {
+    background-color: #D4D4D4;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.rest-photo {
+    width: 100px;
+    height: 100px;
+}
+
+.upload {
+    width: 160px;
+    height: 36px;
+    color: #9B9B9B;
+    border: 1px solid #9B9B9B;
+    align-self: center;
+    border-radius: 30px;
+    margin: 25px 0 10px 0;
+}
+
+.desc-box {
+    height: 90%;
+    width: 90%;
+    border: 1px solid #9B9B9B;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.upload-btn {
+    width: 100px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    background-color: #DB3022;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    margin-right: 100px;
+}
