@@ -16,6 +16,7 @@ import ProductDetail from '../../pages/Detail/productDetail';
 import RequiredAuth from '../../components/requiredAuth';
 
 import Register from '../../components/Auth/custRegister'
+import CategoryFilter from '../../pages/CategoryFiltered/categoryFilter';
 
 const Router = () => {
   return (
@@ -37,8 +38,9 @@ const Router = () => {
       <Route path='/productSelling' element={<RequiredAuth> <ProductSelling /> </RequiredAuth>} />
 
       <Route path='/category' element={<CategoryCard2/>} />
+      <Route path='/category/:category' element={<CategoryFilter/>} />
       <Route path='/product' element={<ProductCard2/>} />
-      <Route path='/productDetail' element={<ProductDetail />} />
+      <Route path='/productDetail/:id' element={<ProductDetail/>} />
     </Routes>
     </BrowserRouter>
   )

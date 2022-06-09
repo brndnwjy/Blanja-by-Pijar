@@ -5,7 +5,7 @@ import BtnGroup from '../../../components/ButtonGroup/activeCust'
 
 const Login = () => {
   return (
-    <div className='container'>
+    <div className='flex'>
         <FormHeader />
         <BtnGroup />
         <LoginForm />

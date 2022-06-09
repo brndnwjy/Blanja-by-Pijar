@@ -38,7 +38,7 @@ const CategoryCard2 = () => {
                         <div className={styles.wrapper}>
                             <div className='card' style={{width: '200px', height: '200px'}}>
                                 <div className={styles.centering}>
-                                    <Link to='/' className={styles.link}>
+                                    <Link to={`/category/${item.category_name}`} className={styles.link}>
                                         <div className={styles['card-body']}>
                                             <h5 className='card-title'>{item.category_name}</h5>
                                         </div>

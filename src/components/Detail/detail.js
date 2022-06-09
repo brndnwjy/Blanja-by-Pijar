@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import axios from '../../configs/axios'
 import styles from './detail.module.css'
 
 const Detail = () => {
+    const {id} = useParams()
+    const [product, setProduct] = useState([])
+  
+    async function fetchData(){
+      try {
+        const result = await axios({
+            method: 'GET',
+            url: `/product/${id}`
+        })
+        setProduct(result.data.data[0])
+      } catch (error) {
+          console.log(error)
+      }
+    }
+  
+    useEffect(()=>{
+      fetchData()
+    })
+  
   return (
     <div className={styles.detail}>
-        <p className={styles.name}>Baju Muslim Pria</p>
+        <p className={styles.name}>{product.product_name}</p>
         <p className={styles.seller}>Zalora Cloth</p>
         <img src="./assets/media/rating.png" alt=''/>
 
         <p className={styles["price-tag"]}>Price</p>
-        <span className={styles.price}>$ 20.0</span>
+        <span className={styles.price}>Rp {product.price}</span>
 
         <div className={styles["modifier-tag"]}>
             <div className={styles["size-tag"]}>
@@ -48,7 +69,7 @@ const Detail = () => {
                 Add Bag
             </button>
 
-            <button className={styles["button-3"]}>
+            <button className={styles["button-3"]}>                
                 Buy Now
             </button>
         </div>

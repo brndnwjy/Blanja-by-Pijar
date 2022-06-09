@@ -35,7 +35,7 @@ const ProductCard2 = () => {
                     {product.map((item)=> (
                         <div className={styles.wrapper}>
                             <div className='card' style={{width: '200px'}}>
-                                <Link to='/' className={styles.link}>
+                                <Link to={`/productDetail/${item.product_id}`} className={styles.link}>
                                     <div className={styles['image-wrapper']}>
                                         <img  src={item.image} alt='product' />
                                     </div>

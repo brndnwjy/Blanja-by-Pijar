@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import axios from '../../configs/axios'
 import styles from './detail.module.css'
 
 const Description = () => {
+    const {id} = useParams()
+    const [product, setProduct] = useState([])
+  
+    async function fetchData(){
+      try {
+        const result = await axios({
+            method: 'GET',
+            url: `/product/${id}`
+        })
+        setProduct(result.data.data[0])
+      } catch (error) {
+          console.log(error)
+      }
+    }
+  
+    useEffect(()=>{
+      fetchData()
+    })
+  
   return (
     <div className={styles["product-info"]}>
         <p className={styles.title}>Informasi Produk</p>
@@ -14,19 +35,7 @@ const Description = () => {
         <div className={styles.wrapper}>
             <p className={styles.subtitle}>Description</p>
             <div className={styles.desc}>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p>
-                    Donec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor.
-                    Fusce
-                    nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed
-                    enim
-                    vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a
-                    consequat mauris, vel suscipit ipsum.
-                    Donec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare
-                    suscipit magna.
-                </p>
+                <p>{product.product_desc}</p>
             </div>
         </div>
 
